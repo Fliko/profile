@@ -1,0 +1,41 @@
+body {
+  background: #60061e;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: bottom center;
+	background-repeat: no-repeat;
+	width: 100vw;
+  height: 800px;
+	position: fixed;
+	z-index: -1;
+}
+
+.layer, #header {
+  min-height: 800px;
+}
+
+.bg {
+  background-image: url('img/nightsky_1.png');
+  background-position: top center;
+}
+.mg1 {
+  background-image: url('img/peter.png');
+  top: -120px;
+  left: -200px;
+}
+.fg {
+  background-image: url('img/nightsky_4.png');
+}
+
+.content {
+  background: #60061e;
+}
