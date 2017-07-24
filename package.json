@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Fliko/profile#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "semantic-ui": "^2.2.11"
   }
 }
