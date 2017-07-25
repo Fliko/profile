@@ -1,47 +1,52 @@
-body {
-  background-image: url('img/kziAoNv.gif');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center center;
-  background-attachment: fixed;
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #60061e;
-  color: white;
-}
-#header {
+html, body {
   height: 100%;
-  width: 100%;
-  background: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  margin: 0;
+  background: #eaeded;
 }
-.title {
-  font-size: 300%;
-  display: block;
-  margin: auto;
-  text-align: center;
-  margin-top: 30px;
-  text-shadow: 4px 4px black;
+.texture {
+  background: url('https://wallpaperscraft.com/image/texture_vintage_wall_background_dark_93580_1920x1080.jpg');
+  height: 100%;
+  width: 20%;
+  top: 0;
+  left: 0;
+  vertical-align: middle;
+  margin: 0;
+  position: fixed;
 }
-.about {
-  margin: auto;
-  margin-top: 100px;
-  background: #d1e5e1;
-  width:50vw;
-  border-radius: 5px;
-  color: black;
-}
-#header > img {
-  height: 80px;
-  width: 60px;
+.texture > img {
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
-  padding: 20px;
+  object-fit: cover;
+  margin: 20% 20%;
 }
-select {
-  margin-top: 30px;
-  height: 50px;
-  width:50px;
+.texture > .social {
+  margin: auto;
+  position: absolute;
+  top: 90%;
 }
-.about > p {
+.social:hover {
+  background: orange;
+}
+.linkedin {
+  left: 50%;
+}
+.github {
+  left: 20%;
+}
+.menu {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  display: block;
+  position:relative;
+  top: 0;
+  left: 30%;
+}
+.menu:hover {
+  color: gray;
+}
+#applications {
+  right: 0;
 }

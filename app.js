@@ -1,3 +1,7 @@
+document.selectElementById('hamburger').addEventListener('click', function() {
+  document.selectElementById('menu').classList.toggle('show');
+  this.classList.toggle('show');
+});
 window.addEventListener('scroll', function(e) {
   let distance = window.scrollY;
   let layers = document.querySelectorAll('[data-type="parallax"]');
