@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   background: #eaeded;
 }
@@ -9,9 +10,10 @@ html, body {
   width: 20%;
   top: 0;
   left: 0;
-  vertical-align: middle;
-  margin: 0;
   position: fixed;
+}
+.content {
+  flex: 3;
 }
 .texture > img {
   height: 200px;
@@ -47,6 +49,10 @@ html, body {
 .menu:hover {
   color: gray;
 }
-#applications {
-  right: 0;
+.content {
+  margin-left: 20%;
+}
+.header {
+  text-decoration: none;
+  color: black;
 }
