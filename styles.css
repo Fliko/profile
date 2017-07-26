@@ -1,9 +1,12 @@
 html, body {
   height: 100%;
   width: 100%;
+  position: relative;
   margin: 0;
-  background: #eaeded;
+  z-index: -10;
+  background: #eaebeb;
 }
+/*---------------- Side Bar -----------------*/
 .texture {
   background: url('https://wallpaperscraft.com/image/texture_vintage_wall_background_dark_93580_1920x1080.jpg');
   height: 100%;
@@ -49,10 +52,82 @@ html, body {
 .menu:hover {
   color: gray;
 }
+/*-------------- Animated Titles --------------------*/
+h2,h2:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  }
 .content {
   margin-left: 20%;
 }
 .header {
   text-decoration: none;
   color: black;
+}
+
+h2 {
+  display: inline-block;
+  color: black;
+  font-family: 'Righteous', serif;
+  font-size: 6em;
+  text-shadow: .03em .03em 0 gray;
+  width: 100%;
+  }
+  h2:after {
+    content: attr(data-shadow);
+    position: absolute;
+    z-index: -1;
+    top: .06em; left: .06em;
+    text-shadow: none;
+    background-image:
+      -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shad-anim 12s linear infinite;
+    }
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+/*--------------- Application Cards ---------------------*/
+.card-container {
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+  align-content: flex-start;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 400px;
+  background: white;
+  margin: 20px;
+  margin-right: 0;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+.card > * {
+  padding: 5px;
+}
+.card > a {
+  text-decoration: none;
+  color: black;
+}
+.card > a>img {
+  height: 350px;
+  width:400px;
+}
+.card:hover {
+ background: #dadbdb
+}
+.card > p {
+  word-wrap: break-word;
+  width: 400px;
+  height: 200px;
 }

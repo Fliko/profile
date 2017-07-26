@@ -8,20 +8,66 @@
   <body>
     <div class="texture">
       <img src="img/headshot.jpg" alt="Headshot">
-      <a class="menu" href="apps">Applications</a>
-      <a class="menu" href="projects">Side Projects</a>
-      <p></p>
+      <a class="menu" href="#apps">Applications</a>
+      <a class="menu" href="#projects">In Progress</a>
+      <a class="menu" href="#about">About</a>
+
       <a class="social github" href="https://www.github.com/fliko"><img src="img/GitHub-Mark-Light-64px.png" alt="OctoCat"></a>
       <a class="social linkedin" href="http://www.linkedin.com/in/tracebaxter"><img src="img/In-White-66px-R.png" alt="Linkedin"></a>
     </div>
     <div class="content">
+      <div id="Description">
+        <h2 id="about" class="dashed-shadow" data-shadow="About">About</h2>
+      </div>
       <div id="applications">
-        <a class="header" href="#apps"><h3>Applications</h3></a>
+        <h2 id="apps" class="dashed-shadow" data-shadow="Applications">Applications</h2>
+
+        <div class="card-container">
+          <div class="card">
+            <a href="http://codeup.life"><h3>Codeup</h3></a>
+            <a href="http://codeup.life"><img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/42/551779/dba776438b51b2f5abcfddb62b8e65c9-original.png" alt="Codeup"></a>
+            <p>This is a starter parageraph but later i will talka bout how awesome this site is you know klasjfalskjf</p>
+          </div>
+          <div class="card">
+            <a href="https://github.com/Corgi-cat/Echoes"><h3>Echoes</h3></a>
+            <a href="https://github.com/Corgi-cat/Echoes"><img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/89/551782/1fa781c76da50bdb285826160d2ea7e9-original.png" alt="Echoes"></a>
+            <p>This is a starter parageraph but later i will talka bout how awesome this site is you know klasjfalskjf</p>
+          </div>
+        </div>
+
       </div>
       <div id="SideProjects">
-        <a class="header" href="#projects"><h3>Side Projects</h3></a>
+        <h2 id="projects" class="dashed-shadow" data-shadow="In Progress">In Progress</h2>
+
+        <div class="card-container">
+          <div class="card">
+            <a href=""><h3>WeatherApp</h3></a>
+          <a href="#"><img src="http://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg" alt="WeatherApp"></a>
+            <ul><b>implemented:</b>
+              <li>Connection to api</li>
+              <li>Basic City search</li>
+              <li>http Authentication</li>
+              <li>PSQL DataBase</li>
+            </ul>
+            <ul> <b>TODO:</b>
+              <li>Pull more Data from the api</li>
+              <li>Flask-login Authentication</li>
+              <li>Redis Worker to update saved Data</li>
+              <li>Search will check saved Data before api</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
+
+<!--  Card Skeleton
+<div class="card">
+  <a href="#"><h3></h3></a>
+  <img src="" alt="">
+  <p></p>
+</div>
+-->
