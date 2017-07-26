@@ -69,7 +69,7 @@ h2,h2:after {
 
 h2 {
   display: inline-block;
-  color: black;
+  color: #4d4235;
   font-family: 'Righteous', serif;
   font-size: 6em;
   text-shadow: .03em .03em 0 gray;
@@ -130,4 +130,9 @@ h2 {
   word-wrap: break-word;
   width: 400px;
   height: 200px;
+}
+.card > .short {
+  height: 0;
+  width: 100%;
+  margin: 5px;
 }
