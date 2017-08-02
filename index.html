@@ -7,29 +7,40 @@
   </head>
   <body>
     <div class="texture">
-      <img src="img/headshot.jpg" alt="Headshot">
+      <img id="headshot" src="img/headshot.jpg" alt="Headshot">
+      <a class="menu" href="#about">About</a>
       <a class="menu" href="#apps">Applications</a>
       <a class="menu" href="#projects">In Progress</a>
-      <a class="menu" href="#about">About</a>
+
+      <button id="popup">Contact Me!</button>
 
       <a class="social github" href="https://www.github.com/fliko"><img src="img/GitHub-Mark-Light-64px.png" alt="OctoCat"></a>
       <a class="social linkedin" href="http://www.linkedin.com/in/tracebaxter"><img src="img/In-White-66px-R.png" alt="Linkedin"></a>
     </div>
-    <div class="content">
+    <div id="content" class="content">
       <div id="Description">
         <h2 id="about" class="dashed-shadow" data-shadow="About">About</h2>
+        <div class="card-about">
+          <p><b>Name:</b> Trace Baxter</p><p><b>NickName(s):</b> Fliko, Monsterling</p>
+          <p><b>Ideal Career:</b> Mad Scientist / Space pirate</p>
+          <p><b>Skills:</b> JavaScript, HTML5, CSS3, React, Redux, AngularJS, NodeJs, Python, Flask, MongoDB, MySQL, PostgresSQL, Heroku, Digital Ocean, AWS ec2, Linux, Mac</p>
+          <p><b>Description:</b> What you would be getting from me is an intelligent, passionate engineer and jack of all trades looking to find his niche in Software Engineering.
+          I have solid experience in JavaScript and its MV* frameworks, node and Python servers, and writing efficient database queries. My career goals are to become a "monster",
+          someone that can fix any problem, a mentor, and to be contributing to a large software project that has a positive impact on my community.  My current personal goals
+          are to become proficient at playing the piano, set up an Etherium mining rig and contribute to the Solidity code base.</p>
+        </div>
       </div>
       <div id="applications">
         <h2 id="apps" class="dashed-shadow" data-shadow="Applications">Applications</h2>
 
         <div class="card-container">
           <div class="card">
-            <a href="http://codeup.life"><h3>Codeup</h3></a>
+            <a href="http://codeup.life"><h1>Codeup</h1></a>
             <a href="http://codeup.life"><img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/42/551779/dba776438b51b2f5abcfddb62b8e65c9-original.png" alt="Codeup"></a>
             <p>This is a starter parageraph but later i will talka bout how awesome this site is you know klasjfalskjf</p>
           </div>
           <div class="card">
-            <a href="https://github.com/Corgi-cat/Echoes"><h3>Echoes</h3></a>
+            <a href="https://github.com/Corgi-cat/Echoes"><h1>Echoes</h1></a>
             <a href="https://github.com/Corgi-cat/Echoes"><img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/89/551782/1fa781c76da50bdb285826160d2ea7e9-original.png" alt="Echoes"></a>
             <p>This is a starter parageraph but later i will talka bout how awesome this site is you know klasjfalskjf</p>
           </div>
@@ -41,7 +52,7 @@
 
         <div class="card-container">
           <div class="card">
-            <a href="https://flask-weatherapp.herokuapp.com/"><h3>WeatherApp</h3></a>
+            <a href="https://flask-weatherapp.herokuapp.com/"><h1>WeatherApp</h1></a>
             <a href="https://flask-weatherapp.herokuapp.com/"><img src="http://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg" alt="WeatherApp"></a>
             <p class="short">Followed <a href="https://realpython.com/blog/python/flask-by-example-part-1-project-setup/">this</a> tutorial Closely</p>
             <ul><b>implemented:</b>
@@ -61,13 +72,29 @@
 
       </div>
     </div>
+    <div class="visible" id="popupContact">
+    <!-- Contact Us Form -->
+    <form action="#" id="form" method="post" name="form">
+    <img id="close" src="https://cdn3.iconfinder.com/data/icons/status/100/close_4-512.png">
+    <h1>Contact Me</h1>
+    <hr>
+    <p class="visible" id="errMsg">I am very sorry, all fields need to be filled.</p>
+    <p class="visible" id="pass">Your message sent successfully!</p>
+    <p class="visible" id="error">Something went wrong on our end, feel free to send me an email directly at <b>baxter.flw@gmail.com</b></p>
+    <input id="name" name="name" placeholder="Name" type="text">
+    <input id="email" name="email" placeholder="Email" type="text">
+    <textarea id="msg" name="message" placeholder="Message"></textarea>
+    <a id="submit">Send</a>
+    </form>
+    </div>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
 
 <!--  Card Skeleton
 <div class="card">
-  <a href="#"><h3></h3></a>
+  <a href="#"><h1></h1></a>
   <img src="" alt="">
   <p></p>
 </div>
