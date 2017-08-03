@@ -253,6 +253,10 @@ textarea {
   cursor:pointer;
   border-radius:5px
 }
+#submit:disabled {
+  background: url('https://cdn.dribbble.com/users/1151621/screenshots/3028650/spinner.gif') no-repeat 50% 50%;
+  background-size: 50%;
+}
 span {
   color:red;
   font-weight:700

@@ -1,24 +1,36 @@
 (function(){
       emailjs.init("user_xd8yicSzJBe2NOlH7KxqX");
 })();
+let incomplete = 'I am very sorry, all fields need to be filled.';
+let error = 'OH MY! Something went wrong on our end, feel free to send me an email directly at <b>baxter.flw@gmail.com</b>';
+let success = 'Your message sent successfully!';
 
 function check_empty() {
+  let feedback = document.getElementById('msg');
+  let submit = this;
+  submit.setAttribute('disabled', 'disabled');
   if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
-    document.getElementById('errMsg').classList.toggle('visible');
+    feedback.innerHTML = incomplete;
+    feedback.style.color = 'red';
+    submit.removeAttribute('disabled');
   } else {
-    const name = document.getElementById('name').text;
-    const email = document.getElementById('email').text;
-    const message = document.getElementById('msg').text;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('msgbody').value;
 
     document.getElementById('form').addEventListener('click', function(e) {
       e.preventDefault();
       emailjs.send('gmail', templateKey, {'from_name': name, 'from_mail': email, "to_name": 'Trace', 'message_html': message})
               .then(
                 function(response) {
-                  document.getElementById('pass').classList.toggle('visible');
+                  feedback.innerHTML = success;
+                  feedback.style.color = 'green';
+                  submit.removeAttribute('disabled');
+                  document.getElementById('form').reset();
                 },
                 function(error) {
-                  document.getElementById('error').classList.toggle('visible');
+                  feedback.innerHTML = error;
+                  feedback.style.color = 'red';
                 }
               );
     });
