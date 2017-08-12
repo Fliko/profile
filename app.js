@@ -1,24 +1,34 @@
 (function(){
       emailjs.init("user_xd8yicSzJBe2NOlH7KxqX");
+
 })();
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    let headings = document.getElementsByTagName('h2');
+    for(var i = 0; i < headings.length; i++) {
+      headings[i].attr('data-shadow', headings[i].dataset.shadow);
+    }
+  }
+};
 let incomplete = 'I am very sorry, all fields need to be filled.';
 let error = 'OH MY! Something went wrong on our end, feel free to send me an email directly at <b>baxter.flw@gmail.com</b>';
 let success = 'Your message sent successfully!';
 
 function check_empty() {
   let feedback = document.getElementById('msg');
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('msgbody').value;
+  let form = document.getElementById('form');
   let submit = this;
   submit.setAttribute('disabled', 'disabled');
-  if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+
+  if (name == "" || email == "" || message == "") {
     feedback.innerHTML = incomplete;
     feedback.style.color = 'red';
     submit.removeAttribute('disabled');
   } else {
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('msgbody').value;
-
-    document.getElementById('form').addEventListener('click', function(e) {
+    form.addEventListener('click', function(e) {
       e.preventDefault();
       emailjs.send('gmail', templateKey, {'from_name': name, 'from_mail': email, "to_name": 'Trace', 'message_html': message})
               .then(
@@ -26,7 +36,7 @@ function check_empty() {
                   feedback.innerHTML = success;
                   feedback.style.color = 'green';
                   submit.removeAttribute('disabled');
-                  document.getElementById('form').reset();
+                  form.reset();
                 },
                 function(error) {
                   feedback.innerHTML = error;
