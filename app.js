@@ -6,7 +6,7 @@ document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     let headings = document.getElementsByTagName('h2');
     for(var i = 0; i < headings.length; i++) {
-      headings[i].attr('data-shadow', headings[i].dataset.shadow);
+      headings[i].dataset.shadow = headings[i].innerHTML;
     }
   }
 };
