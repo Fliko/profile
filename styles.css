@@ -10,13 +10,13 @@ html, body {
 .texture {
   background: url('https://wallpaperscraft.com/image/texture_vintage_wall_background_dark_93580_1920x1080.jpg');
   height: 100%;
-  width: 20%;
+  width: 21%;
   top: 0;
   left: 0;
   position: fixed;
 }
 .texture > img {
-  width: 60%;
+  width: 50%;
   border-radius: 50%;
   object-fit: cover;
   margin: 20% 20%;
@@ -29,7 +29,6 @@ html, body {
 .texture > .social {
   margin: auto;
   position: absolute;
-  height: 50%;
   top: 90%;
 }
 button {
@@ -84,7 +83,7 @@ h2,h2:after {
   position: relative;
 }
 .content {
-  margin-left: 20%;
+  margin-left: 22%;
 }
 .header {
   text-decoration: none;
@@ -93,7 +92,7 @@ h2,h2:after {
 h2 {
   display: inline-block;
   color: #4d4235;
-  font-family: 'Righteous', serif;
+  font-family: Helvetica, sans-serif;
   font-size: 6em;
   text-shadow: .02em .02em 0 black;
   width: 100%;
@@ -138,11 +137,9 @@ h2 {
 /*--------------- Application Cards ---------------------*/
 .card-container {
   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row;
-   flex-direction: row;
-  align-content: center;
-  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .card {
@@ -187,8 +184,8 @@ Pop up form
 ------------------------------------------------*/
 img#close {
   position:absolute;
-  right:-20px;
-  top:-20px;
+  right:0px;
+  top:-18px;
   cursor:pointer;
   width: 50px;
 }
@@ -200,7 +197,8 @@ div#popupContact {
   font-family: Helvetica sans-serif;
 }
 form {
-  max-width:600px;
+  width: 80%;
+  max-width: 550px;
   min-width:350px;
   padding:10px 50px;
   border:2px solid gray;
