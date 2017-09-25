@@ -15,11 +15,6 @@ html, body {
   left: 0;
   position: fixed;
 }
-
-.content {
-  flex: 3;
-}
-
 .texture > img {
   width: 60%;
   border-radius: 50%;
@@ -34,6 +29,7 @@ html, body {
 .texture > .social {
   margin: auto;
   position: absolute;
+  height: 50%;
   top: 90%;
 }
 button {
@@ -46,7 +42,7 @@ button {
   background-color:#cd853f;
   color:#fff;
   font-family:sans-serif;
-  font-size:18px;
+  font-size:25px;
   animation: 1s slide;
 }
 .social:hover {
@@ -55,6 +51,7 @@ button {
 .linkedin {
   left: 50%;
   animation: 1.5s slide;
+  padding-left: 20px;
 }
 .github {
   left: 20%;
@@ -63,12 +60,12 @@ button {
 .menu {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 33px;
   margin-top: 10px;
   display: block;
   position:relative;
   top: 0;
-  left: 30%;
+  left: 10%;
   overflow: hidden;
   animation: 1.5s slide;
 }
@@ -85,7 +82,7 @@ h2,h2:after {
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  }
+}
 .content {
   margin-left: 20%;
 }
@@ -93,7 +90,6 @@ h2,h2:after {
   text-decoration: none;
   color: black;
 }
-
 h2 {
   display: inline-block;
   color: #4d4235;
@@ -119,7 +115,7 @@ h2 {
     @keyframes shad-anim {
       0% {background-position: 0 0}
       0% {background-position: 100% -100%}
-      }
+    }
   /*--------------- About -------------------*/
 
 .card-about {
@@ -146,12 +142,14 @@ h2 {
    -webkit-flex-direction: row;
    flex-direction: row;
   align-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 48%;
+  flex: 1 1 48%;
+  max-width: 800px;
   background: white;
   margin: 20px;
   margin-right: 0;
@@ -170,7 +168,7 @@ h2 {
 }
 .card > a>img {
   height: 350px;
-  width:100%;
+  max-width: 100%;
 }
 .card:hover {
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
@@ -189,21 +187,21 @@ Pop up form
 ------------------------------------------------*/
 img#close {
   position:absolute;
-  right:-14px;
-  top:-14px;
+  right:-20px;
+  top:-20px;
   cursor:pointer;
-  width: 30px;
+  width: 50px;
 }
 div#popupContact {
   position:fixed;
   left:50%;
   top:17%;
   margin-left:-202px;
-  font-family:sans-serif
+  font-family: Helvetica sans-serif;
 }
 form {
-  max-width:300px;
-  min-width:250px;
+  max-width:600px;
+  min-width:350px;
   padding:10px 50px;
   border:2px solid gray;
   border-radius:10px;
@@ -213,7 +211,6 @@ form {
 p {
   margin-top:30px
 }
-
 hr {
   margin:10px -50px;
   border:0;
@@ -221,12 +218,13 @@ hr {
 }
 input[type=text] {
   width:82%;
+  height: 44px;
   padding:10px;
   margin-top:30px;
   border:1px solid #ccc;
   padding-left:40px;
   font-size:16px;
-  font-family:raleway
+  font-family: Helvetica sans-serif;
 }
 textarea {
   width:82%;
@@ -261,7 +259,6 @@ span {
   color:red;
   font-weight:700
 }
-
 .blur {
   filter: blur(3px);
 }
